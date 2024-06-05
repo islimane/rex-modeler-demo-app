@@ -4,6 +4,11 @@
       <Declarations>
         <!-- Card: User Welcome -->
         <Declaration name="CardUserWelcome_DataLoaded" type="DomBool" />
+        <!-- Card: Display -->
+        <Declaration name="CardDisplay_DataLoaded" type="DomBool"/>
+        <Declaration name="CardDisplay_SubComponentName" type="String"/>
+        <Declaration name="CardDisplay_DisplayList" type="LoMyDisplays"/>
+        <Declaration name="CardDisplay_InformationText" type="String" />
         <!-- Card: Activities -->
         <Declaration name="CardActivities_InformationText" type="String" />
         <Declaration name="CardActivities_ActivitiesList" type="LoActivities" />
@@ -38,6 +43,8 @@
         <Events>
           <!-- Card: User Welcome-->
           <Event name="CardUserWelcome_loadData" action="CardUserWelcome_loadData" />
+          <!-- Card: Display -->
+          <Event name="CardDisplay_loadData" action="CardDisplay_loadData" />
           <!-- Card: Activities -->
           <Event name="CardActivities_loadData" action="CardActivities_LoadActivities" />
           <Event name="CardActivities_ShowAllActivitiesPressed" action="CardActivities_ShowAllActivities" />   
@@ -67,6 +74,41 @@
         </Parameters>
       </Action>
       <!-- Card: User Welcome  END-->
+
+      <!-- Card: Display  START-->
+        <Action name="CardDisplay_loadData" actionType="LOAD" type="LoMyDisplays" > 
+            <Return name="ProcessContext::CardDisplay_DisplayList" />
+            <TransitionTo action="CardDisplay_loadInformationText"/>
+        </Action>
+
+        <Action name="CardDisplay_loadInformationText" actionType="LOGIC" call="ProcessContext::CardDisplay_DisplayList.myGetInfoForDisplayCard"> 
+            <Parameters>
+              <Input name="loItems" value="ProcessContext::CardDisplay_DisplayList"/>
+              <Input name="type" value="Display" type="Literal" />
+            </Parameters>
+            <Return name="ProcessContext::CardDisplay_InformationText" />
+            <TransitionTo action="CardDisplay_reduceListItems"/>
+          </Action>
+          <Action name="CardDisplay_reduceListItems" actionType="LOGIC" call="ProcessContext::CardDisplay_DisplayList.myReduceNumberOfListItems"> 
+            <TransitionTo action="CardDisplay_setSubcomponentName"/>
+          </Action>
+
+        <Action name="CardDisplay_setSubcomponentName" actionType="LOGIC" call="ProcessContext::CardController.getDisplayedSubcomponentName"> 
+            <Parameters>
+              <Input name="loItems" value="ProcessContext::CardDisplay_DisplayList"/>
+              <Input name="type" value="Display" type="Literal" />
+            </Parameters>
+            <Return name="ProcessContext::CardDisplay_SubComponentName" />
+            <TransitionTo action="CardDisplay_setDataLoaded"/>
+          </Action>
+
+          <Action name="CardDisplay_setDataLoaded" actionType="LOGIC" call="Utils.identity"> 
+            <Parameters>
+              <Input name="value" value="1" type="Literal" />
+            </Parameters>
+            <Return name="ProcessContext::CardDisplay_DataLoaded" />
+          </Action>
+      <!-- Card: Display  END-->
 
       <!-- Card: Activities START -->
       <Action name="CardActivities_LoadActivities" actionType="LOGIC" call="ProcessContext::CardActivities_ActivitiesList.getActivitiesForCard">
