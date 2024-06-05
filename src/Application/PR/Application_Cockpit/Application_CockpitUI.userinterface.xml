@@ -166,7 +166,25 @@
                     <Binding target="Icon" type="Image" binding=".iconId" bindingMode="ONE_WAY" />
                   </Bindings>
                 </Items>
+                <Events>
+                    <ItemSelectedEvent event="CardDisplay_itemSelected">
+                      <Params>
+                        <Param name="pKey" value=".pKey" />
+                      </Params>
+                    </ItemSelectedEvent>
+                  </Events>
               </CockpitList>
+              <LinkBar>
+                <ImageButton name="ShowAllDisplaysButton">
+                  <Bindings>
+                    <Resource target="Text" type="Label" id="ShowAllDisplaysLink" defaultLabel="Show all Displays" bindingMode="ONE_WAY" />
+                    <Resource target="Image" type="Image" id="Shelf" defaultImage="Shelf" />
+                  </Bindings>
+                  <Events>
+                    <ButtonPressedEvent event="CardDisplay_showAllDisplays" />
+                  </Events>
+                </ImageButton>
+              </LinkBar>
           </CardContainer>
           <!-- Display Card END-->
         <!-- Activities Card START-->
