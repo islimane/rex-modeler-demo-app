@@ -1,0 +1,66 @@
+<UIDescription name="MyDisplay::CreateNewWizardUI">
+    <Page pagePattern="SingleSectionDialogPage" onBackDiscard="true">
+        <PageHeader>
+            <Bindings>
+                <Resource target="title" type="Label" id="AddDisplayId" defaultLabel="Add Display" />
+            </Bindings>
+            <MenuItems>
+                <MenuItem directlyVisible="true" itemId="AddMenuId">
+                    <Bindings>
+                        <Resource target="Text" type="Label" id="createNewDisplayId" defaultLabel="Create" />
+                        <Resource target="Icon" type="Image" id="Plus_PB" />
+                    </Bindings>
+                    <Events>
+                        <ButtonPressedEvent event="createNewDisplay" />
+                    </Events>
+                </MenuItem>
+            </MenuItems>
+        </PageHeader>
+        <Section sectionName="masterSection" sectionPattern="SingleAreaSection">
+            <Area areaName="mainArea" areaPattern="GroupedElementsArea">
+                <GroupElement name="Info">
+                    <Bindings>
+                      <Resource target="Title" type="Label" id="DisplayDetailInfoGroup" defaultLabel="Info" />
+                    </Bindings>
+                    <InputArea name="Name">
+                      <Bindings>
+                        <Resource target="Label" type="Label" id="DisplayName" defaultLabel="Name" />
+                        <Binding target="Value" binding="ProcessContext::Name" bindingMode="TWO_WAY" />
+                      </Bindings>
+                    </InputArea>
+                    <InputAreaMultiLine name="Description" noOfRows="3">
+                      <Bindings>
+                        <Resource target="Label" type="Label" id="DisplayDescription" defaultLabel="Description" />
+                        <Binding target="Value" binding="ProcessContext::Description" bindingMode="TWO_WAY" />
+                      </Bindings>
+                    </InputAreaMultiLine>
+                  </GroupElement>
+                  
+                  <GroupElement name="Type">
+                    <Bindings>
+                      <Resource target="Title" type="Label" id="DisplayDetailTypeGroup" defaultLabel="Type" />
+                    </Bindings>
+                    <SelectionBox name="Type">
+                      <Bindings>
+                        <Resource target="Label" type="Label" id="DisplayType" defaultLabel="Display Type" />
+                        <Binding target="DataSource" toggleId="DisplayType" bindingMode="TWO_WAY" />
+                        <Binding target="Value" binding="ProcessContext::Type" bindingMode="TWO_WAY" />
+                      </Bindings>
+                      <Items>
+                        <Bindings>
+                           <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                           <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                        </Bindings>
+                      </Items>
+                    </SelectionBox>
+                    <CheckBox name="CompetitorDisplay">
+                      <Bindings>
+                        <Resource target="Label" type="Label" id="CompetitorDisplayCB" defaultLabel="Competitor Display" />
+                        <Binding target="checkedValue" binding="ProcessContext::CompetitorDisplay" bindingMode="TWO_WAY" />
+                      </Bindings>
+                    </CheckBox>
+                  </GroupElement>
+            </Area>
+        </Section>
+    </Page>
+</UIDescription>

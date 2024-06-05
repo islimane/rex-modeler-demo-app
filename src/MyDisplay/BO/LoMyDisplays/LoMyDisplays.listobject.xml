@@ -8,5 +8,5 @@
     <Method name="beforeLoadAsync"/>
     <Method name="afterDoValidateAsync"/>
     <Method name="beforeDoValidateAsync"/>
-  <Method name="myGetInfoForDisplayCard"/><Method name="myReduceNumberOfListItems"/></Methods>
+  <Method name="myGetInfoForDisplayCard"/><Method name="myReduceNumberOfListItems"/><Method name="myAddItem"/></Methods>
 </ListObject>

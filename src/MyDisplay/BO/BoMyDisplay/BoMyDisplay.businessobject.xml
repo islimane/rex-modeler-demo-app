@@ -1,27 +1,32 @@
 <BusinessObject name="BoMyDisplay" schemaVersion="1.1">
-  <DataSource name="DsBoMyDisplay" />
+  <DataSource name="DsBoMyDisplay"/>
   <SimpleProperties>
-    <SimpleProperty name="pKey" type="DomPKey" dataSourceProperty="pKey" />
-    <SimpleProperty name="name" type="DomText" dataSourceProperty="name" />
-    <SimpleProperty name="description" type="DomLongDescription" dataSourceProperty="description" />
-    <SimpleProperty name="competitorDisplay" type="DomBool" dataSourceProperty="competitorDisplay" />
+    <SimpleProperty name="pKey" type="DomPKey" dataSourceProperty="pKey"/>
+    <SimpleProperty name="name" type="DomText" dataSourceProperty="name"/>
+    <SimpleProperty name="description" type="DomLongDescription" dataSourceProperty="description"/>
+    <SimpleProperty name="competitorDisplay" type="DomBool" dataSourceProperty="competitorDisplay"/>
+    <SimpleProperty name="type" type="DomDisplayType" dataSourceProperty="type"/>
+    <SimpleProperty name="salesOrg" type="DomSalesOrg" dataSourceProperty="salesOrg"/>
   </SimpleProperties>
-  <NestedObjects></NestedObjects>
-  <ObjectLookups></ObjectLookups>
-  <ListObjects></ListObjects>
+  <NestedObjects/>
+  <ObjectLookups/>
+  <ListObjects/>
   <Methods>
-    <Method name="beforeSaveAsync" />
-    <Method name="afterSaveAsync" />
-    <Method name="beforeLoadAsync" />
-    <Method name="afterLoadAsync" />
-    <Method name="beforeInitialize" />
-    <Method name="afterInitialize" />
-    <Method name="beforeDoValidateAsync" />
-    <Method name="afterDoValidateAsync" />
-    <Method name="beforeCreateAsync" />
-    <Method name="afterCreateAsync" />
-    <Method name="loadAsync" />
-    <Method name="saveAsync" />
-    <Method name="createAsync" />
-  </Methods>
+    <Method name="beforeSaveAsync"/>
+    <Method name="afterSaveAsync"/>
+    <Method name="beforeLoadAsync"/>
+    <Method name="afterLoadAsync"/>
+    <Method name="beforeInitialize"/>
+    <Method name="afterInitialize"/>
+    <Method name="beforeDoValidateAsync"/>
+    <Method name="afterDoValidateAsync"/>
+    <Method name="beforeCreateAsync"/>
+    <Method name="afterCreateAsync"/>
+    <Method name="loadAsync"/>
+    <Method name="saveAsync"/>
+    <Method name="createAsync"/>
+  <Method name="mySetEARights"/><Method name="myValidateNameEmpty"/></Methods>
+  <Validations>
+    <Validation name="myValidateNameEmpty" />
+  </Validations>
 </BusinessObject>

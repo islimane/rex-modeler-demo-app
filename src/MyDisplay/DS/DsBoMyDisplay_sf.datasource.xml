@@ -4,6 +4,8 @@
       <Attribute name="name" table="Display__c" column="Name" />
       <Attribute name="description" table="Display__c" column="Description__c" />
       <Attribute name="competitorDisplay" table="Display__c" column="Competitor_Display__c" />
+      <Attribute name="type" table="Display__c" column="Type__c" />
+      <Attribute name="salesOrg" table="Display__c" column="Sales_Org__c" />
     </Attributes>
     <Entities>
       <Entity name="Display__c" alias="" idAttribute="Id" />

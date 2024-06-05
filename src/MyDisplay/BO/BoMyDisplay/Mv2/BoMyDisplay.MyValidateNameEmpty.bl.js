@@ -27,16 +27,13 @@
  * -> returns: Type and variable name in which the return value is stored.
  *
  * ------- METHOD RELEVANT GENERATOR PARAMETERS BELOW - ADAPT WITH CAUTION -------
- * @function afterLoadAsync
+ * @function myValidateNameEmpty
  * @this BoMyDisplay
  * @kind businessobject
- * @async
  * @namespace CUSTOM
- * @param {Object} result
- * @param {Object} context
- * @returns promise
+ * @param {messageCollector} messageCollector
  */
-function afterLoadAsync(result, context){
+function myValidateNameEmpty(messageCollector){
     var me = this;
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //
@@ -45,9 +42,17 @@ function afterLoadAsync(result, context){
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
     
-    me.mySetEARights();
-    var promise=when.resolve(result);
-		
+    
+    var newError;
+    if(Utils.isEmptyString(me.getName())){
+        newError = {
+            "level": "error",
+            "objectClass": "BoMyDisplay",
+            "messageID" : "DisplayNameEmpty"
+        };
+        messageCollector.add(newError);
+    }
+        
    
   
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,5 +61,5 @@ function afterLoadAsync(result, context){
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    return promise;
+    
 }

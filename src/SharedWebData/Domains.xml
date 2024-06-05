@@ -1,4 +1,10 @@
 <DomainRepository>
+    <Domain name="DomDisplayType" baseType="Toggle" length="255">
+        <Initializer>
+          <Default value="' '" />
+          <Empty value="" />
+        </Initializer>
+    </Domain>
   <!-- Domains added in 234 - start -->
   <Domain name="DomAssessmentTaskStatus" baseType="Toggle" length="255">
     <Initializer>

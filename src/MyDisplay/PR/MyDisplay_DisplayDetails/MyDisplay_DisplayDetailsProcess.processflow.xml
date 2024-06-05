@@ -4,6 +4,10 @@
         <Declarations>
             <Declaration name="DisplayList" type="LoMyDisplays" />
             <Declaration name="CurrentDisplay" type="BoMyDisplay" />
+            <Declaration name="Name" type="DomText" />
+            <Declaration name="Description" type="DomLongDescription" />
+            <Declaration name="CompetitorDisplay" type="DomBool" />
+            <Declaration name="Type" type="DomDisplayType" />
         </Declarations>
         <Parameters>
             <Input name="DisplayPKey" type="DomPKey" />
@@ -36,6 +40,7 @@
           <UIDescription>MyDisplay::DisplayDetailsUI</UIDescription>
           <Events>
             <Event name="itemSelected" action="LoadDisplayDetails" />
+            <Event name="addDisplay" action="LoadDisplayDetails.create"/>
           </Events>
         </Action>
         <Action name="LoadDisplayDetails" actionType="MASTER_DETAIL_HANDLER">
@@ -44,6 +49,17 @@
             </MasterList>
             <DetailObject name="ProcessContext::CurrentDisplay" objectClass="BoMyDisplay">
               <Save type="DIRTY" confirmation="FALSE" validate="TRUE" />
+              <Create autoSave="FALSE">
+                <WizardProcess name="MyDisplay::CreateNewWizardProcess" submitParameter="ProcessContext::AddDisplay_ButtonPressed">
+                  <ReturnValues>
+                    <Return name="ProcessContext::Name" value="Name" />
+                    <Return name="ProcessContext::Description" value="Description" />
+                    <Return name="ProcessContext::CompetitorDisplay" value="CompetitorDisplay" />
+                    <Return name="ProcessContext::Type" value="Type" />
+                    <Return name="ProcessContext::AddDisplay_ButtonPressed" value="buttonPressed" />
+                  </ReturnValues>
+                </WizardProcess>
+              </Create>
             </DetailObject>
           </Action>
       </Actions>

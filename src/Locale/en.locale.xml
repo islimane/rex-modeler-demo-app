@@ -3023,6 +3023,10 @@
         <Label id="QuickAccessCardTitle" text="Quick Access" translationStatus="7"/>
         <Label id="CardQuickAccess_NoDataMessageMainText" text="No quick links were defined for you yet" translationStatus="7"/>
         <Label id="ActivitiesId" text="Activities" translationStatus="1"/>
+        <Label id="MyNoCardNoDataMainText" text="No data available, " translationStatus="1"/>
+        <Label id="MyNoCardNoDataSubText" text="relax and enjoy the sun!" translationStatus="1"/>
+        <Label id="ShowAllDisplaysLink" text="Show all Displays" translationStatus="1"/>
+        <Label id="DisplayCardTitle" text="Displays" translationStatus="1"/>
       </UserInterface>
       <UserInterface id="UserNotificationFlyoutUI">
         <Label id="NotificationsTitleId" text="Notification Details" translationStatus="7"/>
@@ -3425,6 +3429,26 @@
         <Label id="NonUniqueUPCId" text="Non-unique Products" translationStatus="7"/>
         <Label id="PrdGTINLabel" text="GTIN" translationStatus="7"/>
         <Label id="PrdNoLabel" text="Product Code" translationStatus="7"/>
+      </UserInterface>
+      <UserInterface id="MyDisplayCreateNewWizardUI">
+        <Label id="createNewDisplayId" text="Create" translationStatus="1"/>
+        <Label id="AddDisplayId" text="Add Display" translationStatus="1"/>
+        <Label id="DisplayName" text="Name" translationStatus="1"/>
+        <Label id="DisplayDescription" text="Description" translationStatus="1"/>
+        <Label id="DisplayDetailInfoGroup" text="Info" translationStatus="1"/>
+        <Label id="DisplayType" text="Display Type" translationStatus="1"/>
+        <Label id="CompetitorDisplayCB" text="Competitor Display" translationStatus="1"/>
+        <Label id="DisplayDetailTypeGroup" text="Type" translationStatus="1"/>
+      </UserInterface>
+      <UserInterface id="MyDisplayDisplayDetailsUI">
+        <Label id="AddDisplay" text="Add Display" translationStatus="1"/>
+        <Label id="DisplayDetailsTitle" text="Display Details" translationStatus="1"/>
+        <Label id="DisplayName" text="Name" translationStatus="1"/>
+        <Label id="DisplayDescription" text="Description" translationStatus="1"/>
+        <Label id="DisplayDetailInfoGroup" text="Info" translationStatus="1"/>
+        <Label id="DisplayType" text="Display Type" translationStatus="1"/>
+        <Label id="CompetitorDisplayCB" text="Competitor Display" translationStatus="1"/>
+        <Label id="DisplayDetailTypeGroup" text="Type" translationStatus="1"/>
       </UserInterface>
     </UserInterfaceContracts>
     <ConfirmationMessages>
@@ -4025,6 +4049,9 @@
         <Label id="CasBoTimeSlotStartTimeBiggerEndTime" text="Enter a start time that’s earlier than the end time." translationStatus="7"/>
         <Label id="CasBoTimeSlotOverlap" text="One or more time slots overlap with the times you entered. Update existing time slots in the Time Slots related list, or create a time slot that doesn’t overlap." translationStatus="7"/>
         <Label id="CasBoTimeSlotDayOfWeekMandatory" text="Select the day of week." translationStatus="7"/>
+      </BusinessObject>
+      <BusinessObject id="BoMyDisplay">
+        <Label id="DisplayNameEmpty" text="Please enter a Name." translationStatus="1"/>
       </BusinessObject>
     </ValidationMessages>
     <NavigationLabels>

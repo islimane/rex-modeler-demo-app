@@ -4,6 +4,17 @@
         <Bindings>
           <Resource target="title" type="Label" id="DisplayDetailsTitle" defaultLabel="Display Details"  />
         </Bindings>
+        <MenuItems>
+          <MenuItem directlyVisible="true" itemId="AddDisplay">
+            <Bindings>
+              <Resource target="Text" type="Label" id="AddDisplay" defaultLabel="Add Display" />
+              <Resource target="Icon" type="Image" id="Plus_PB" />
+            </Bindings>
+            <Events>
+              <ButtonPressedEvent event="addDisplay" />
+            </Events>
+          </MenuItem>
+        </MenuItems>
       </PageHeader>
       <Section sectionName="masterSection" sectionPattern="SingleAreaSection">
         <Area areaName="mainArea" areaPattern="SingleElementArea">
@@ -70,6 +81,19 @@
             <Bindings>
               <Resource target="Title" type="Label" id="DisplayDetailTypeGroup" defaultLabel="Type" />
             </Bindings>
+            <SelectionBox name="Type">
+                <Bindings>
+                  <Resource target="Label" type="Label" id="DisplayType" defaultLabel="Display Type" />
+                  <Binding target="DataSource" toggleId="DisplayType" bindingMode="TWO_WAY" />
+                  <Binding target="Value" binding="ProcessContext::CurrentDisplay.type" bindingMode="TWO_WAY" />
+                </Bindings>
+                <Items>
+                  <Bindings>
+                    <Binding target="ItemValue" type="Text" binding=".id" bindingMode="ONE_WAY" />
+                    <Binding target="ItemText" type="Text" binding=".text" bindingMode="ONE_WAY" />
+                  </Bindings>
+                </Items>
+              </SelectionBox>
             <CheckBox name="CompetitorDisplay" >
               <Bindings>
                 <Resource target="Label" type="Label" id="CompetitorDisplayCB" defaultLabel="Competitor Display" />

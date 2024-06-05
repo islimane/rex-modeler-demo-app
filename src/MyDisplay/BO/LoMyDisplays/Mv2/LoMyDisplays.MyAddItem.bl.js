@@ -27,16 +27,13 @@
  * -> returns: Type and variable name in which the return value is stored.
  *
  * ------- METHOD RELEVANT GENERATOR PARAMETERS BELOW - ADAPT WITH CAUTION -------
- * @function afterLoadAsync
- * @this BoMyDisplay
- * @kind businessobject
- * @async
+ * @function myAddItem
+ * @this LoMyDisplays
+ * @kind listobject
  * @namespace CUSTOM
- * @param {Object} result
- * @param {Object} context
- * @returns promise
+ * @param {BoMyDisplay} newDisplayDetail
  */
-function afterLoadAsync(result, context){
+function myAddItem(newDisplayDetail){
     var me = this;
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //
@@ -45,8 +42,17 @@ function afterLoadAsync(result, context){
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
     
-    me.mySetEARights();
-    var promise=when.resolve(result);
+    let iconId='Shelf_Lime';
+    if (Utils.isTrue(newDisplayDetail.getCompetitorDisplay())) iconId='Shelf_Dark_Orange';
+    var liMyNewDisplay ={
+        pKey: newDisplayDetail.getPKey(),
+        name: newDisplayDetail.getName(),
+        description: newDisplayDetail.getDescription(),
+        competitorDisplay: newDisplayDetail.getCompetitorDisplay(),
+        iconId: iconId,
+    }
+    me.addListItems([liMyNewDisplay]);
+    me.setCurrentByPKey(liMyNewDisplay.getPKey());
 		
    
   
@@ -56,5 +62,5 @@ function afterLoadAsync(result, context){
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    return promise;
+    
 }

@@ -27,16 +27,12 @@
  * -> returns: Type and variable name in which the return value is stored.
  *
  * ------- METHOD RELEVANT GENERATOR PARAMETERS BELOW - ADAPT WITH CAUTION -------
- * @function afterLoadAsync
+ * @function mySetEARights
  * @this BoMyDisplay
  * @kind businessobject
- * @async
  * @namespace CUSTOM
- * @param {Object} result
- * @param {Object} context
- * @returns promise
  */
-function afterLoadAsync(result, context){
+function mySetEARights(){
     var me = this;
     ///////////////////////////////////////////////////////////////////////////////////////////////
     //                                                                                           //
@@ -45,9 +41,19 @@ function afterLoadAsync(result, context){
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
     
-    me.mySetEARights();
-    var promise=when.resolve(result);
-		
+    
+    var acl = me.getACL();
+    acl.removeRight(AclObjectType.PROPERTY, "competitorDisplay", AclPermission.EDIT);
+    if (Utils.isTrue(me.getCompetitorDisplay())) {
+        acl.setAce({
+          "objectType" : AclObjectType.OBJECT,
+          "objectName" : "BoMyDisplay",
+          "rights" : AclPermission.EDIT,
+          "grant" : false
+        });
+      }
+
+      // OR: acl.removeRight(AclObjectType.OBJECT, "BoMyDisplay", AclPermission.EDIT);
    
   
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -56,5 +62,5 @@ function afterLoadAsync(result, context){
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
-    return promise;
+    
 }

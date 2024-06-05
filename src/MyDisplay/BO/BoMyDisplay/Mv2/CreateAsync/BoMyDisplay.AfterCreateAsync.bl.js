@@ -44,6 +44,11 @@ function afterCreateAsync(result, context){
     //                                                                                           //
     ///////////////////////////////////////////////////////////////////////////////////////////////
     
+    me.setObjectStatus(STATE.NEW | STATE.DIRTY);
+    var promise=when.resolve(result);
+        me.setObjectStatus(STATE.NEW | STATE.DIRTY);
+        me.setSalesOrg(ApplicationContext.get('user').getBoUserSales().getSalesOrg());
+    me.mySetEARights();
     var promise=when.resolve(result);
 
     ///////////////////////////////////////////////////////////////////////////////////////////////

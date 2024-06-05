@@ -1,0 +1,5 @@
+<ValidationMessages name="MyBoMyDisplayMessages" businessObject="BoMyDisplay"
+schemaVersion="0.0.0.5">
+  <ValidationMessage name="DisplayNameEmpty" defaultMessage="Please enter a Name."
+comment="validates entered work times" />
+</ValidationMessages>
