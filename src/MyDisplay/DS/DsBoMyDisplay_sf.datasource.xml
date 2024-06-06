@@ -6,6 +6,7 @@
       <Attribute name="competitorDisplay" table="Display__c" column="Competitor_Display__c" />
       <Attribute name="type" table="Display__c" column="Type__c" />
       <Attribute name="salesOrg" table="Display__c" column="Sales_Org__c" />
+      <Attribute name="customer" table="Display__c" column="Account__c" />
     </Attributes>
     <Entities>
       <Entity name="Display__c" alias="" idAttribute="Id" />

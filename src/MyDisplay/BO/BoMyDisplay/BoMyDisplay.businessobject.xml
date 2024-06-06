@@ -7,9 +7,12 @@
     <SimpleProperty name="competitorDisplay" type="DomBool" dataSourceProperty="competitorDisplay"/>
     <SimpleProperty name="type" type="DomDisplayType" dataSourceProperty="type"/>
     <SimpleProperty name="salesOrg" type="DomSalesOrg" dataSourceProperty="salesOrg"/>
+    <SimpleProperty name="customer" type="DomPKey" dataSourceProperty="customer"/>
   </SimpleProperties>
   <NestedObjects/>
-  <ObjectLookups/>
+  <ObjectLookups>
+    <ObjectLookup name="luCustomer" objectClass="LuCustomer" dataSourceProperty="customer" lookupProperty="pKey" />
+  </ObjectLookups>
   <ListObjects/>
   <Methods>
     <Method name="beforeSaveAsync"/>

@@ -76,6 +76,15 @@
                   <Binding target="Value" binding="ProcessContext::CurrentDisplay.description" bindingMode="TWO_WAY" />
                 </Bindings>
               </InputAreaMultiLine>
+              <Lookup name="Customer">
+                <Bindings>
+                  <Resource target="Label" type="Label" id="CustomerId" defaultLabel="Customer" />
+                  <Binding target="Value" binding="ProcessContext::CurrentDisplay.luCustomer.name" bindingMode="TWO_WAY" />
+                </Bindings>
+                <Events>
+                  <LookupEvent event="CustomerLookup" />
+                </Events>
+              </Lookup>
           </GroupElement>
           <GroupElement name="Type">
             <Bindings>

@@ -8,6 +8,7 @@
             <Declaration name="Description" type="DomLongDescription" />
             <Declaration name="CompetitorDisplay" type="DomBool" />
             <Declaration name="Type" type="DomDisplayType" />
+            <Declaration name="SelectedCustomer" type="DomPKey" />
         </Declarations>
         <Parameters>
             <Input name="DisplayPKey" type="DomPKey" />
@@ -41,6 +42,7 @@
           <Events>
             <Event name="itemSelected" action="LoadDisplayDetails" />
             <Event name="addDisplay" action="LoadDisplayDetails.create"/>
+            <Event name="CustomerLookup" action="OpenCustomerNameLookup" />
           </Events>
         </Action>
         <Action name="LoadDisplayDetails" actionType="MASTER_DETAIL_HANDLER">
@@ -62,6 +64,30 @@
               </Create>
             </DetailObject>
           </Action>
-      </Actions>
+          <!-- Open a customer lookup to change the assigned Customer-->
+            <Action actionType="PROCESS" name="OpenCustomerNameLookup" process="Customer::LookupProcess">
+                <ReturnValues>
+                <Return name="ProcessContext::SelectedCustomer" value="customerPKey" />
+                </ReturnValues>
+                <TransitionTo action="SelectedCustomerDecision" />
+            </Action>
+            <Action name="SelectedCustomerDecision" actionType="DECISION" parameter="ProcessContext::SelectedCustomer">
+                <CaseEmpty action="ShowDisplayDetails" />
+                <CaseElse action="SetCustomer" />
+            </Action>
+            <Action name="SetCustomer" actionType="LOGIC" call="Utils.identity">
+                <Parameters>
+                    <Input name="customer" value="ProcessContext::SelectedCustomer" />
+                </Parameters>
+                <Return name="ProcessContext::CurrentDisplay.customer"/>
+                <TransitionTo action="LoadCustomerLookup" />
+            </Action>
+            <Action actionType="LOAD" name="LoadCustomerLookup" type="LuCustomer">
+                <Parameters>
+                    <Input name="pKey" value="ProcessContext::CurrentDisplay.customer" />
+                </Parameters>
+                <Return name="ProcessContext::CurrentDisplay.luCustomer" />
+            </Action>
+    </Actions>
     </Body>
   </Process>
