@@ -9,6 +9,10 @@
         <Declaration name="CardDisplay_SubComponentName" type="String"/>
         <Declaration name="CardDisplay_DisplayList" type="LoMyDisplays"/>
         <Declaration name="CardDisplay_InformationText" type="String" />
+        <!-- Card DisplayReport -->
+        <Declaration name="CardDisplayReport_DisplayList" type="LoMyDisplays"/>
+        <Declaration name="CardDisplayReport_DataLoaded" type="DomBool"/>
+        <Declaration name="CardDisplayReport_CompetitorRate" type="DomDecimal" />
         <!-- Card: Activities -->
         <Declaration name="CardActivities_InformationText" type="String" />
         <Declaration name="CardActivities_ActivitiesList" type="LoActivities" />
@@ -47,6 +51,8 @@
           <Event name="CardDisplay_loadData" action="CardDisplay_loadData" />
           <Event name="CardDisplay_showAllDisplays" action="CardDisplay_loadDisplayDetails" />
           <Event name="CardDisplay_itemSelected" action="CardDisplay_showSelectedDisplayDetails" />
+          <!-- Card: DisplayReport -->
+          <Event name="CardDisplayReport_loadData" action="CardDisplayReport_loadData" />
           <!-- Card: Activities -->
           <Event name="CardActivities_loadData" action="CardActivities_LoadActivities" />
           <Event name="CardActivities_ShowAllActivitiesPressed" action="CardActivities_ShowAllActivities" />   
@@ -121,6 +127,24 @@
             </Parameters>
           </Action>
       <!-- Card: Display  END-->
+
+        <!-- Card: Display Reports START-->
+        <Action name="CardDisplayReport_loadData" actionType="LOAD" type="LoMyDisplays" >
+            <Return name="ProcessContext::CardDisplayReport_DisplayList" />
+            <TransitionTo action="CardDisplayReport_getCompetitorRate"/>
+        </Action>
+        <Action name="CardDisplayReport_getCompetitorRate" actionType="LOGIC" call="ProcessContext::CardDisplayReport_DisplayList.myGetCompetitorRate">
+            <Parameters/>
+            <Return name="ProcessContext::CardDisplayReport_CompetitorRate" />
+            <TransitionTo action="CardDisplayReport_setDataLoaded"/>
+        </Action>
+        <Action name="CardDisplayReport_setDataLoaded" actionType="LOGIC" call="Utils.identity">
+            <Parameters>
+            <Input name="value" value="1" type="Literal" />
+            </Parameters>
+            <Return name="ProcessContext::CardDisplayReport_DataLoaded" />
+        </Action>
+        <!-- Card: Display Reports END-->
 
       <!-- Card: Activities START -->
       <Action name="CardActivities_LoadActivities" actionType="LOGIC" call="ProcessContext::CardActivities_ActivitiesList.getActivitiesForCard">

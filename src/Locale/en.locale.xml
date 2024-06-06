@@ -753,6 +753,7 @@
       <Label id="LoTimeSlot_GroupTextPostfix" text=" hrs" translationStatus="7"/>
       <Label id="Yes" text="Yes" translationStatus="1"/>
       <Label id="No" text="No" translationStatus="1"/>
+      <Label id="CardReportingCompetitorRate_Title" text="Competitor Rate" translationStatus="1"/>
     </Global>
     <UserInterfaceContracts>
       <UserInterface id="ApplicationDashboardUI">
@@ -3449,6 +3450,9 @@
         <Label id="DisplayType" text="Display Type" translationStatus="1"/>
         <Label id="CompetitorDisplayCB" text="Competitor Display" translationStatus="1"/>
         <Label id="DisplayDetailTypeGroup" text="Type" translationStatus="1"/>
+        <Label id="MainId" text="Main" translationStatus="1"/>
+        <Label id="AttachmentsId" text="Attachments" translationStatus="1"/>
+        <Label id="CustomerId" text="Customer" translationStatus="1"/>
       </UserInterface>
     </UserInterfaceContracts>
     <ConfirmationMessages>

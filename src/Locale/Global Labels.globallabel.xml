@@ -322,4 +322,5 @@
   <Label id="TakePicture" text="Take Picture" translationStatus="7" />
   <Label id="SelectPicture" text="Select Picture from Gallery" translationStatus="7" />
   <Label id="ReviewPicture" text="Review Pictures" translationStatus="7" />
+  <Label id="CardReportingCompetitorRate_Title" text="Competitor Rate" translationStatus="1"/>
 </Global>
