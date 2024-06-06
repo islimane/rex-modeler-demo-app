@@ -11,11 +11,10 @@
   </SimpleProperties>
   <NestedObjects/>
   <ObjectLookups>
-    <ObjectLookup name="luCustomer" objectClass="LuCustomer" dataSourceProperty="customer" lookupProperty="pKey" />
+    <ObjectLookup name="luCustomer" objectClass="LuCustomer" dataSourceProperty="customer" lookupProperty="pKey"/>
   </ObjectLookups>
   <ListObjects>
-    <ListObject name="loAttachment" objectClass="LoMyDisplayAttachment" dataSourceProperty="pKey"
-    listProperty="display" />
+    <ListObject name="loAttachment" objectClass="LoMyDisplayAttachment" dataSourceProperty="pKey" listProperty="display"/>
   </ListObjects>
   <Methods>
     <Method name="beforeSaveAsync"/>
@@ -31,8 +30,8 @@
     <Method name="loadAsync"/>
     <Method name="saveAsync"/>
     <Method name="createAsync"/>
-  <Method name="mySetEARights"/><Method name="myValidateNameEmpty"/></Methods>
+  <Method name="mySetEARights"/><Method name="myValidateNameEmpty"/><Method name="myHasLuCustomer"/><Method name="myNavigateTo"/></Methods>
   <Validations>
-    <Validation name="myValidateNameEmpty" />
+    <Validation name="myValidateNameEmpty"/>
   </Validations>
 </BusinessObject>

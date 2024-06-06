@@ -99,6 +99,26 @@
                   <Binding target="Value" binding="ProcessContext::CurrentDisplay.description" bindingMode="TWO_WAY" />
                 </Bindings>
               </InputAreaMultiLine>
+              <Merger name="CustomerMerger" pattern="oneInputControlTwoButtonsMax" leftRatio="80" rightRatio="20" >
+                <Lookup name="Customer">
+                  <Bindings>
+                    <Resource target="Label" type="Label" id="CustomerId" defaultLabel="Customer" />
+                    <Binding target="Value" binding="ProcessContext::CurrentDisplay.luCustomer.name" bindingMode="TWO_WAY" />
+                  </Bindings>
+                  <Events>
+                    <LookupEvent event="CustomerLookup" />
+                  </Events>
+                </Lookup>
+                <ImageButton name="NavigateTo">
+                    <Bindings>
+                      <Resource target="Image" type="Image" id="Navigate" defaultImage="Navigate" />
+                      <Binding type="Visible" target="Visible" call="ProcessContext::CurrentDisplay.myHasLuCustomer"/>
+                    </Bindings>
+                    <Events>
+                      <ButtonPressedEvent event="NavigateTo" />
+                    </Events>
+                  </ImageButton>
+              </Merger>
               <Lookup name="Customer">
                 <Bindings>
                   <Resource target="Label" type="Label" id="CustomerId" defaultLabel="Customer" />
