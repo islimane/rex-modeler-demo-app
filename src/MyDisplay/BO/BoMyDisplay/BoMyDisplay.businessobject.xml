@@ -13,7 +13,10 @@
   <ObjectLookups>
     <ObjectLookup name="luCustomer" objectClass="LuCustomer" dataSourceProperty="customer" lookupProperty="pKey" />
   </ObjectLookups>
-  <ListObjects/>
+  <ListObjects>
+    <ListObject name="loAttachment" objectClass="LoMyDisplayAttachment" dataSourceProperty="pKey"
+    listProperty="display" />
+  </ListObjects>
   <Methods>
     <Method name="beforeSaveAsync"/>
     <Method name="afterSaveAsync"/>
