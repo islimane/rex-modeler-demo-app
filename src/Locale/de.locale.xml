@@ -1,4 +1,16 @@
 <Locale language="de" languageCode="de">
+    <Localizations>
+        <DateFormats>
+            <Date value="DD.MM.YYYY" />
+            <ShortDate value="MMM ddd" />
+            <DateTime value="DD/MM/YYYY HH:mm" />
+            <Time value="HH:mm" />
+        </DateFormats>
+        <NumberFormats>
+            <DecimalSeparator value="." />
+            <ThousandSeparator value="," />
+        </NumberFormats>
+    </Localizations>
   <Translations>
     <Framework>
       <Label id="Yes" text="Ja" translationStatus="7"/>
@@ -18,12 +30,12 @@
       <Label id="Search" text="Suche" translationStatus="7"/>
       <Label id="Notification" text="Benachrichtigung" translationStatus="7"/>
       <Label id="GenericErrorMessage" text="Fehler aufgetreten. Wenden Sie sich an Ihren Administrator." translationStatus="7"/>
-      <!-- Attachments -->
+            <!-- Attachments -->
       <Label id="Documents" text="Dokumente" translationStatus="7"/>
       <Label id="Images" text="Bilder" translationStatus="7"/>
       <Label id="Videos" text="Videos" translationStatus="7"/>
-      <!-- END of Attachments-->
-      <!-- Advanced Search -->
+            <!-- END of Attachments-->
+            <!-- Advanced Search -->
       <Label id="AdvSearch_SaveFavorite" text="Als meinen Favorit speichern" translationStatus="7"/>
       <Label id="AdvSearch_FavoriteActive" text="Favorit" translationStatus="7"/>
       <Label id="AdvSearch_DeleteFavorite" text="Meinen Favorit löschen" translationStatus="7"/>
@@ -49,8 +61,8 @@
       <Label id="AdvSearch_IsNot" text="Ist nicht [&lt;&gt;]" translationStatus="7"/>
       <Label id="AdvSearch_Before" text="Vor [&lt;]" translationStatus="7"/>
       <Label id="AdvSearch_After" text="Nach [&gt;]" translationStatus="7"/>
-      <!-- END of Advanced Search -->
-      <!-- Date Picker UI -->
+            <!-- END of Advanced Search -->
+            <!-- Date Picker UI -->
       <Label id="DatePickerUI_Set" text="Festlegen" translationStatus="7"/>
       <Label id="DatePickerUI_SetToday" text="Heute" translationStatus="7"/>
       <Label id="DatePickerUI_Clear" text="Löschen" translationStatus="7"/>
@@ -75,8 +87,8 @@
       <Label id="DatePickerUI_Friday" text="Fr" translationStatus="7"/>
       <Label id="DatePickerUI_Saturday" text="Sa" translationStatus="7"/>
       <Label id="DatePickerUI_Sunday" text="So" translationStatus="7"/>
-      <!-- END of Date Picker UI -->
-      <!-- Calendar control -->
+            <!-- END of Date Picker UI -->
+            <!-- Calendar control -->
       <Label id="Calendar_TimeId" text="Uhrzeit" translationStatus="7"/>
       <Label id="Calendar_SundayId" text="So" translationStatus="7"/>
       <Label id="Calendar_MondayId" text="Mo" translationStatus="7"/>
@@ -86,12 +98,12 @@
       <Label id="Calendar_FridayId" text="Fr" translationStatus="7"/>
       <Label id="Calendar_SaturdayId" text="Sa" translationStatus="7"/>
       <Label id="Calendar_DatepickerId" text="Datum festlegen" translationStatus="7"/>
-      <!-- END of Calendar control -->
-      <!-- Master Detail-->
+            <!-- END of Calendar control -->
+            <!-- Master Detail-->
       <Label id="MasterDetail_ConfirmationMsg" text="Das Detailobjekt auf Ihrem Bildschirm wurde geändert. Vorgang wirklich fortsetzen und Änderungen speichern?" translationStatus="7"/>
       <Label id="MasterDetail_SaveFailed" text="Fehler beim Speichern." translationStatus="7"/>
-      <!-- END of Master Detail-->
-      <!-- Password change -->
+            <!-- END of Master Detail-->
+            <!-- Password change -->
       <Label id="UsernamePasswordError" text="Benutzername oder Kennwort falsch. Überprüfen Sie Ihre Eingabe." translationStatus="7"/>
       <Label id="UsernamePasswordErrorLabel" text="Benutzername oder Kennwort ungültig" translationStatus="7"/>
       <Label id="PasswordVerificationError" text="Fehler bei der Kennwortbestätigung. Überprüfen Sie Ihre Eingabe." translationStatus="7"/>
@@ -105,20 +117,20 @@
       <Label id="ChangePwd_NetPasswordError" text="Fehler beim Ändern des Kennworts." translationStatus="7"/>
       <Label id="ChangePwd_NetPasswordTitleError" text="Fehler" translationStatus="7"/>
       <Label id="ChangePwd_NetPasswordTitleError" text="Fehler" translationStatus="7"/>
-      <!-- END of Password change -->
+            <!-- END of Password change -->
       <Label id="ReplicationUpdatePackageAvailable" text="Es ist ein neues Aktualisierungspaket verfügbar. Starten Sie die Anwendung neu, um die Aktualisierung herunterzuladen und zu installieren." translationStatus="7"/>
       <Label id="ReplicationPasswordAccessDenied" text="Die Anwendung kann nicht mit dem Server synchronisiert werden, da Ihr Benutzerkennwort abgelaufen ist. Navigieren Sie zum Menü &quot;Kennwort ändern&quot; und aktualisieren Sie es." translationStatus="7"/>
       <Label id="ReplicationConnectionError" text="Fehler beim Abgleich. Verbindung mit dem Server nicht verfügbar." translationStatus="7"/>
       <Label id="Exception_CriticalErrorTitle" text="Kritischer Fehler" translationStatus="7"/>
       <Label id="Exception_CriticalErrorMessage" text="Starten Sie die Anwendung neu, damit keine Daten beschädigt werden." translationStatus="7"/>
-      <!-- Loadmask -->
+            <!-- Loadmask -->
       <Label id="Loading" text="Laden" translationStatus="7"/>
       <Label id="Initializing_Database" text="Datenbank initialisieren" translationStatus="7"/>
       <Label id="Updating_Application" text="Anwendung aktualisieren" translationStatus="7"/>
       <Label id="Deploying_Application" text="Anwendung bereitstellen" translationStatus="7"/>
       <Label id="Replicating" text="Abgleichen" translationStatus="7"/>
-      <!-- END of Loadmask -->
-      <!-- Restriction violation checks -->
+            <!-- END of Loadmask -->
+            <!-- Restriction violation checks -->
       <Label id="DomainCheckViolationTitle" text="Fehler bei Domäneneinschränkung:" translationStatus="7"/>
       <Label id="DomainCheckViolation" text="Ihre vorgenommenen Änderungen können nicht gespeichert werden, da der Wert #ORIGVALUE# in der Eigenschaft #FIELD# gegen die Einschränkung #RESTRICTION# für die Eigenschaftsdomäne #DOMAINNAME# verstößt. Korrigieren Sie den Wert und versuchen Sie dann, erneut zu speichern." translationStatus="7"/>
       <Label id="DomainCheckDateFormat" text="Datumsformat: JJJJ-MM-TT hh:mm:ss oder JJJJ-MM-TT" translationStatus="7"/>
@@ -126,7 +138,7 @@
       <Label id="DomainCheckMinimum" text="Mindestwert: #MINVALUE#" translationStatus="7"/>
       <Label id="DomainCheckMaximum" text="Maximalwert: #MAXVALUE#" translationStatus="7"/>
       <Label id="DomainCheckLength" text="Maximale Länge: #LENGTH# Zeichen" translationStatus="7"/>
-      <!-- END of Restriction violation checks -->
+            <!-- END of Restriction violation checks -->
       <Label id="ThousendSign_Chart" text="k" translationStatus="7"/>
       <Label id="DatePickerUI_MinMaxHeader" text="Ungültiges Datum" translationStatus="7"/>
       <Label id="DatePickerUI_MinMessage" text="Datum darf nicht früher sein als" translationStatus="7"/>
@@ -422,18 +434,18 @@
       <Label id="AdvSearch_ApplyFilter" text="Filter anwenden" translationStatus="7"/>
     </Framework>
     <Global>
-      <!-- ####################################################################################################################################################################################### -->
-      <!-- ### Global Labels from 234 start (Already approved by translation team) -->
-      <!-- Labels for Message Boxes - Generic Labels which should not be changed -->
+            <!-- ####################################################################################################################################################################################### -->
+            <!-- ### Global Labels from 234 start (Already approved by translation team) -->
+            <!-- Labels for Message Boxes - Generic Labels which should not be changed -->
       <Label id="Back" text="Zurück" translationStatus="7"/>
       <Label id="MessageBox_Title_Notification" text="Benachrichtigung" translationStatus="7"/>
-      <!-- Visit Card -->
+            <!-- Visit Card -->
       <Label id="CardVisits_NoDataMessageMainDateText" text="Keine Besuche geplant," translationStatus="7"/>
       <Label id="priorityLabelId" text="Priorität" translationStatus="7"/>
-      <!-- Sync Card -->
+            <!-- Sync Card -->
       <Label id="ReplicationSyncCard_Visit_Plural" text="Besuche" translationStatus="7"/>
       <Label id="ReplicationSyncCard_Visit_Singular" text="Besuch" translationStatus="7"/>
-      <!-- Visit Context Menu -->
+            <!-- Visit Context Menu -->
       <Label id="Complete" text="Abschließen" translationStatus="7"/>
       <Label id="Reschedule" text="Neu planen" translationStatus="7"/>
       <Label id="NavigateToCustomer" text="Zu Shop navigieren" translationStatus="7"/>
@@ -443,29 +455,29 @@
       <Label id="AddImage" text="Bild hinzufügen" translationStatus="7"/>
       <Label id="ReviewImages" text="Bilder überprüfen" translationStatus="7"/>
       <Label id="NoOfPicturesExceedsMaxCount" text="Sie können nur 5 Bilder hinzufügen." translationStatus="7"/>
-      <!-- Visit List Empty Message -->
+            <!-- Visit List Empty Message -->
       <Label id="CardVisits_NoDataMessageMainText" text="Sieht frei und verfügbar aus!" translationStatus="7"/>
       <Label id="CardVisits_NoDataMessageSubText" text="Es sind noch keine Besuche geplant." translationStatus="7"/>
-      <!-- Visit Calendar -->
+            <!-- Visit Calendar -->
       <Label id="Display_Current_Week" text="CW" translationStatus="7"/>
-      <!-- Inventory Check - Retail Visit KPI Group Names -->
+            <!-- Inventory Check - Retail Visit KPI Group Names -->
       <Label id="PrimaryRetailVisitKPI_GroupText" text="Standard" translationStatus="7"/>
       <Label id="PrimaryRetailVisitKPI_GroupTextAdditional" text="Weitere" translationStatus="7"/>
-      <!-- Visit Tasks (Store Cockpit) -->
+            <!-- Visit Tasks (Store Cockpit) -->
       <Label id="CardVisitTasks_NoDataMessageMainText" text="Sie haben keine Aufgaben für den Besuch." translationStatus="7"/>
-      <!-- Visit KPIs: Used for splitting up DateTimes to a date part and a time part. In UI we show 2 rows for a DateTime. Lables are added as Postfix to the KPI question -->
+            <!-- Visit KPIs: Used for splitting up DateTimes to a date part and a time part. In UI we show 2 rows for a DateTime. Lables are added as Postfix to the KPI question -->
       <Label id="VisitKPI_DateTimeSplit_DatePart_Postfix" text=" Datum" translationStatus="7"/>
       <Label id="VisitKPI_DateTimeSplit_TimePart_Postfix" text=" Uhrzeit" translationStatus="7"/>
-      <!-- Visit KPIs: Product Category filter - Clear Filter label -->
+            <!-- Visit KPIs: Product Category filter - Clear Filter label -->
       <Label id="ClearFilter" text="Filter löschen" translationStatus="7"/>
-      <!-- KPI Location Filter - Default label for Store -->
+            <!-- KPI Location Filter - Default label for Store -->
       <Label id="InStoreLocation_Store" text="Geschäft" translationStatus="7"/>
-      <!-- Visit KPI:Product Scan not associated to Store -->
+            <!-- Visit KPI:Product Scan not associated to Store -->
       <Label id="ProductScan_NoValidStoreText" text="Das Produkt ist Ihren Aufgaben nicht zugeordnet." translationStatus="7"/>
       <Label id="ProductScan_NoValidStoreLocationText" text="Das Produkt ist an diesem Standort im Geschäft nicht verfügbar. Suchen Sie an einem anderen Standort im Geschäft nach diesem Produkt." translationStatus="7"/>
       <Label id="BoVisitAssessmentTask_TimeFormatValidationFor" text="für" translationStatus="7"/>
-      <!-- ### Global Labels from 234 end (Already approved by translation team) -->
-      <!-- ####################################################################################################################################################################################### -->
+            <!-- ### Global Labels from 234 end (Already approved by translation team) -->
+            <!-- ####################################################################################################################################################################################### -->
       <Label id="Options" text="Optionen" translationStatus="7"/>
       <Label id="Search" text="Suchen" translationStatus="7"/>
       <Label id="Ok" text="OK" translationStatus="7"/>
@@ -748,11 +760,12 @@
       <Label id="TakePicture" text="Foto aufnehmen" translationStatus="7"/>
       <Label id="SelectPicture" text="Foto aus Galerie auswählen" translationStatus="7"/>
       <Label id="ReviewPicture" text="Fotos ansehen" translationStatus="7"/>
-      <!-- Group Title for Operating Hours list -->
+            <!-- Group Title for Operating Hours list -->
       <Label id="LoTimeSlot_TitlePrefix" text="Abweichung im Vergleich zur aktuellen Zeit: " translationStatus="7"/>
       <Label id="LoTimeSlot_GroupTextPostfix" text=" Std." translationStatus="7"/>
       <Label id="Yes" text="Yes" translationStatus="1"/>
       <Label id="No" text="No" translationStatus="1"/>
+      <Label id="CardReportingCompetitorRate_Title" text="Competitor Rate" translationStatus="1"/>
     </Global>
     <UserInterfaceContracts>
       <UserInterface id="ApplicationDashboardUI">
@@ -3025,6 +3038,12 @@
         <Label id="QuickAccessCardTitle" text="Schnellzugriff" translationStatus="7"/>
         <Label id="CardQuickAccess_NoDataMessageMainText" text="Es wurden noch keine Schnell-Links für Sie definiert." translationStatus="7"/>
         <Label id="ActivitiesId" text="Activities" translationStatus="1"/>
+        <Label id="MyNoCardNoDataMainText" text="No data available, " translationStatus="1"/>
+        <Label id="MyNoCardNoDataSubText" text="relax and enjoy the sun!" translationStatus="1"/>
+        <Label id="ShowAllDisplaysLink" text="Zeige alle Displays" translationStatus="1"/>
+        <Label id="DisplayCardTitle" text="Displays" translationStatus="1"/>
+        <Label id="ReportingDislpayCardTitle" text="Displays" translationStatus="1"/>
+        <Label id="ReportingDisplayCardInformation" text="Competitor Rate" translationStatus="1"/>
       </UserInterface>
       <UserInterface id="UserNotificationFlyoutUI">
         <Label id="NotificationsTitleId" text="Benachrichtigungsdetails" translationStatus="7"/>
@@ -3427,6 +3446,30 @@
         <Label id="NonUniqueUPCId" text="Nicht eindeutige Produkte" translationStatus="7"/>
         <Label id="PrdGTINLabel" text="GTIN" translationStatus="7"/>
         <Label id="PrdNoLabel" text="Produktcode" translationStatus="7"/>
+      </UserInterface>
+      <UserInterface id="MyDisplayCreateNewWizardUI">
+        <Label id="createNewDisplayId" text="Create" translationStatus="1"/>
+        <Label id="AddDisplayId" text="Add Display" translationStatus="1"/>
+        <Label id="DisplayName" text="Name" translationStatus="1"/>
+        <Label id="DisplayDescription" text="Description" translationStatus="1"/>
+        <Label id="DisplayDetailInfoGroup" text="Info" translationStatus="1"/>
+        <Label id="DisplayType" text="Display Type" translationStatus="1"/>
+        <Label id="CompetitorDisplayCB" text="Competitor Display" translationStatus="1"/>
+        <Label id="DisplayDetailTypeGroup" text="Type" translationStatus="1"/>
+      </UserInterface>
+      <UserInterface id="MyDisplayDisplayDetailsUI">
+        <Label id="AddDisplay" text="Add Display" translationStatus="1"/>
+        <Label id="DisplayDetailsTitle" text="Display Details" translationStatus="1"/>
+        <Label id="MainId" text="Main" translationStatus="1"/>
+        <Label id="AttachmentsId" text="Attachments" translationStatus="1"/>
+        <Label id="PrintPDF" text="Print PDF" translationStatus="1"/>
+        <Label id="DisplayName" text="Name" translationStatus="1"/>
+        <Label id="DisplayDescription" text="Description" translationStatus="1"/>
+        <Label id="CustomerId" text="Customer" translationStatus="1"/>
+        <Label id="DisplayDetailInfoGroup" text="Info" translationStatus="1"/>
+        <Label id="DisplayType" text="Display Type" translationStatus="1"/>
+        <Label id="CompetitorDisplayCB" text="Competitor Display" translationStatus="1"/>
+        <Label id="DisplayDetailTypeGroup" text="Type" translationStatus="1"/>
       </UserInterface>
     </UserInterfaceContracts>
     <ConfirmationMessages>
@@ -4028,6 +4071,9 @@
         <Label id="CasBoTimeSlotOverlap" text="Mindestens ein Zeitfenster überschneidet sich mit den von Ihnen eingegebenen Zeiten. Aktualisieren Sie die vorhandenen Zeitfenster in der Themenliste &quot;Zeitfenster&quot; oder erstellen Sie ein Zeitfenster, das sich nicht überschneidet." translationStatus="7"/>
         <Label id="CasBoTimeSlotDayOfWeekMandatory" text="Wählen Sie den Wochentag aus." translationStatus="7"/>
       </BusinessObject>
+      <BusinessObject id="BoMyDisplay">
+        <Label id="DisplayNameEmpty" text="Please enter a Name." translationStatus="1"/>
+      </BusinessObject>
     </ValidationMessages>
     <NavigationLabels>
       <Process id="Call.NavigationProcess.StartSalesNavigation">
@@ -4307,7 +4353,7 @@
         <Label id="DailyReport_User" text="Verantwortlich" translationStatus="7"/>
         <Label id="DailyReport_Owner" text="Inhaber" translationStatus="7"/>
       </AdvancedSearchObject>
-      <!-- Advanced Search For ToDo -->
+            <!-- Advanced Search For ToDo -->
       <AdvancedSearchObject id="AsoToDoOverview">
         <Label id="ToDo_Description" text="Beschreibung" translationStatus="7"/>
         <Label id="ToDo_Priority" text="Priorität" translationStatus="7"/>
@@ -4742,10 +4788,26 @@
         <Label translationStatus="7" id="TotalPrdId" text="Gesamtsumme Produkte und andere Artikel"/>
         <Label translationStatus="7" id="TotalAmountId" text="Summe"/>
       </PrintLayout>
+      <PrintLayout id="MyDisplayPDF">
+        <Label id="CurrentDisplayId" text="Current Display" translationStatus="1"/>
+        <Label id="NameId" text="Name:" translationStatus="1"/>
+        <Label id="CustomerId" text="Customer:" translationStatus="1"/>
+        <Label id="DescriptionId" text="Descirption:" translationStatus="1"/>
+        <Label id="TypeId" text="Type:" translationStatus="1"/>
+        <Label id="CompetitorId" text="Competitor:" translationStatus="1"/>
+        <Label id="OwnDisplaysId" text="Own Displays" translationStatus="1"/>
+        <Label id="OwnDisplayNameId" text="Name" translationStatus="1"/>
+        <Label id="OwnDisplayDescriptionId" text="Description" translationStatus="1"/>
+        <Label id="OwnDisplayCompetitorId" text="Competitor&#10;                        Display" translationStatus="1"/>
+        <Label id="CompetitorDisplaysId" text="Competitor Displays" translationStatus="1"/>
+        <Label id="CompetitorDisplayNameId" text="Name" translationStatus="1"/>
+        <Label id="ComppetitorDisplayDescriptionId" text="Description" translationStatus="1"/>
+        <Label id="ComppetitorDisplayCompetitorId" text="Competitor Display" translationStatus="1"/>
+      </PrintLayout>
     </PrintLayouts>
   </Translations>
   <Images>
-    <!-- ClbTypeStatus Plan -->
+        <!-- ClbTypeStatus Plan -->
     <Image id="ClbTypeStatus_Call_Planned" alternativeId="Suitcase_F"/>
     <Image id="ClbTypeStatus_Complaint_Planned" alternativeId="BoltGrey24"/>
     <Image id="ClbTypeStatus_Contract_Planned" alternativeId="ContractGrey24"/>
@@ -4765,7 +4827,7 @@
     <Image id="ClbTypeStatus_Training_Planned" alternativeId="LightbulbGrey24"/>
     <Image id="ClbTypeStatus_Vacation_Planned" alternativeId="PalmTreeGrey24"/>
     <Image id="ClbTypeStatus_VanSales_Planned" alternativeId="TruckGrey24"/>
-    <!-- ClbTypeStatus Plan ... Colored for Visit Card in Cockpit-->
+        <!-- ClbTypeStatus Plan ... Colored for Visit Card in Cockpit-->
     <Image id="ClbTypeStatus_DeliveryVisit_Planned_DD4411" alternativeId="Truck_Dark_Orange"/>
     <Image id="ClbTypeStatus_DeliveryVisit_Planned_467596" alternativeId="Truck_Grey_Blue"/>
     <Image id="ClbTypeStatus_DeliveryVisit_Planned_BBBB00" alternativeId="Truck_Lime"/>
@@ -4871,7 +4933,7 @@
     <Image id="ClbTypeStatus_InboundCall_Planned_77AA99" alternativeId="Suitcase_Sage_Green"/>
     <Image id="ClbTypeStatus_InboundCall_Planned_008899" alternativeId="Suitcase_Sea_Green"/>
     <Image id="ClbTypeStatus_InboundCall_Planned_EE9B38" alternativeId="Suitcase_Yellow_Orange"/>
-    <!-- ClbTypeStatus Done -->
+        <!-- ClbTypeStatus Done -->
     <Image id="ClbTypeStatus_Call_Completed" alternativeId="SuitcaseDoneGrey24"/>
     <Image id="ClbTypeStatus_Complaint_Completed" alternativeId="BoltDoneGrey24"/>
     <Image id="ClbTypeStatus_Contract_Completed" alternativeId="ContractDoneGrey24"/>
@@ -4891,7 +4953,7 @@
     <Image id="ClbTypeStatus_Training_Completed" alternativeId="LightbulbDoneGrey24"/>
     <Image id="ClbTypeStatus_Vacation_Completed" alternativeId="PalmTreeDoneGrey24"/>
     <Image id="ClbTypeStatus_VanSales_Completed" alternativeId="TruckDoneGrey24"/>
-    <!-- ClbTypeStatus Canceled -->
+        <!-- ClbTypeStatus Canceled -->
     <Image id="ClbTypeStatus_Call_Abandoned" alternativeId="SuitcaseCancelledGrey24"/>
     <Image id="ClbTypeStatus_Complaint_Abandoned" alternativeId="BoltCancelledGrey24"/>
     <Image id="ClbTypeStatus_Contract_Abandoned" alternativeId="ContractCancelledGrey24"/>
@@ -4911,17 +4973,17 @@
     <Image id="ClbTypeStatus_Training_Abandoned" alternativeId="LightbulbCancelledGrey24"/>
     <Image id="ClbTypeStatus_Vacation_Abandoned" alternativeId="PalmTreeCancelledGrey24"/>
     <Image id="ClbTypeStatus_VanSales_Abandoned" alternativeId="TruckCancelledGrey24"/>
-    <!-- Star for Customer Main Relation -->
+        <!-- Star for Customer Main Relation -->
     <Image id="Bool_True" alternativeId="StarGrey24"/>
-    <!-- Agenda user selection checkmark -->
+        <!-- Agenda user selection checkmark -->
     <Image id="AgendaUserCurrentlySelected_No" alternativeId="EmptyImage"/>
     <Image id="AgendaUserCurrentlySelected_Yes" alternativeId="CheckDarkGrey24"/>
-    <!--Notification read or unread -->
+        <!--Notification read or unread -->
     <Image id="CheckMarkFalse" alternativeId="Unread24"/>
-    <!--Notification priority -->
+        <!--Notification priority -->
     <Image id="HighPriority" alternativeId="PrioHigh24"/>
     <Image id="LowPriority" alternativeId="PrioLow24"/>
-    <!--CallCalendar-->
+        <!--CallCalendar-->
     <Image id="ClbCalendarStatus_Completed" alternativeId="CheckCircleDarkGrey12Inv"/>
     <Image id="ClbCalendarStatus_Abandoned" alternativeId="CancelledDarkGrey12Inv"/>
     <Image id="ClbCalendarStatus_Planned" alternativeId="EmptyImage"/>
@@ -4929,17 +4991,17 @@
     <Image id="ClbCalendarDatePicker" alternativeId="CalendarBlueGrey16Inv"/>
     <Image id="ClbCalendarPrev" alternativeId="ChevronLeftBlueGrey16Inv"/>
     <Image id="ClbCalendarNext" alternativeId="ChevronRightBlueGrey16Inv"/>
-    <!-- Time Entry Classification -->
+        <!-- Time Entry Classification -->
     <Image id="Edited" alternativeId="PrioHigh24"/>
     <Image id="Manual" alternativeId="PenDarkGrey16"/>
     <Image id="Blank" alternativeId="EmptyImage"/>
-    <!-- Tour Overview -->
+        <!-- Tour Overview -->
     <Image id="Initial" alternativeId="TruckInitialGrey24"/>
     <Image id="Open" alternativeId="TruckOpenGrey24"/>
     <Image id="Running" alternativeId="TruckRunningGrey24"/>
     <Image id="Completed" alternativeId="TruckCompleteGrey24"/>
     <Image id="Canceled" alternativeId="TruckCanceledGrey24"/>
-    <!-- UserNotification Category Images -->
+        <!-- UserNotification Category Images -->
     <Image id="UsrNotification_No" alternativeId="Notification"/>
     <Image id="UsrNotification_PrmMain" alternativeId="Promotion"/>
     <Image id="UsrNotification_SdoOrderEntry" alternativeId="Clipboard"/>
@@ -4949,7 +5011,7 @@
     <Image id="UsrNotification_PayMain" alternativeId="OpenItems"/>
     <Image id="UsrNotification_UsrMain" alternativeId="User"/>
     <Image id="UsrNotification_TargetSetting" alternativeId="Target"/>
-    <!-- UserNotification Other categories -->
+        <!-- UserNotification Other categories -->
     <Image id="UsrNotification_TstMain" alternativeId="Notification"/>
     <Image id="UsrNotification_PrjMain" alternativeId="Notification"/>
     <Image id="UsrNotification_TalMain" alternativeId="Notification"/>
@@ -4957,7 +5019,7 @@
     <Image id="UsrNotification_PlnMain" alternativeId="Notification"/>
     <Image id="UsrNotification_BpaPOS" alternativeId="Notification"/>
     <Image id="UsrNotification_Tpo" alternativeId="Notification"/>
-    <!-- Task Classification Images -->
+        <!-- Task Classification Images -->
     <Image id="TaskClassification_Complaint" alternativeId="Bolt_IC"/>
     <Image id="TaskClassification_Company" alternativeId="UserTie"/>
     <Image id="TaskClassification_Inquiry" alternativeId="Info_IC"/>
@@ -4973,11 +5035,11 @@
     <Image id="TaskClassification_Asset Maintenance" alternativeId="Fridge_IC"/>
     <Image id="TaskClassification_Asset Replacement" alternativeId="Fridge_IC"/>
     <Image id="TaskClassification_Asset Retirement" alternativeId="Fridge_IC"/>
-    <!-- Task Priority Images -->
+        <!-- Task Priority Images -->
     <Image id="TaskPriority_A" alternativeId="PriorityHigh"/>
     <Image id="TaskPriority_B" alternativeId="PriorityMedium"/>
     <Image id="TaskPriority_C" alternativeId="PriorityLow"/>
-    <!-- Order Phase Images -->
+        <!-- Order Phase Images -->
     <Image id="OrderPhaseImage_Released" alternativeId="Done"/>
     <Image id="OrderPhaseImage_Abandoned" alternativeId="Cancelled"/>
     <Image id="OrderPhaseImage_Canceled" alternativeId="Cancelled"/>
@@ -4988,15 +5050,15 @@
     <Image id="OrderPhaseImage_Voided" alternativeId="PriorityLow"/>
     <Image id="OrderPhaseImage_WorkCompleted" alternativeId="Complete"/>
     <Image id="OrderPhaseImage_Approved" alternativeId="Check"/>
-    <!-- Activity Classification Images -->
+        <!-- Activity Classification Images -->
     <Image id="Non_Standard" alternativeId="TaskList"/>
     <Image id="Standard" alternativeId="Suitcase_Grey_Blue"/>
     <Image id="Standard_with_Customer" alternativeId="Store"/>
     <Image id="No_Classification" alternativeId="Activity"/>
-    <!-- Activity Alert Images -->
+        <!-- Activity Alert Images -->
     <Image id="RedIcon" alternativeId="WarningTriangle"/>
     <Image id="YellowIcon" alternativeId="WarningCircle"/>
-    <!-- Visit Status-->
+        <!-- Visit Status-->
     <Image id="VisitTypeStatus_Visit_Planned" alternativeId="Suitcase_F"/>
     <Image id="VisitTypeStatus_Visit_InProgress" alternativeId="Suitcase_F"/>
     <Image id="VisitTypeStatus_Visit_Completed" alternativeId="SuitcaseDoneGrey24"/>
