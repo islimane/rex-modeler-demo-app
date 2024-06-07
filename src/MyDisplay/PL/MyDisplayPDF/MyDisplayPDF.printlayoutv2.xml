@@ -1,0 +1,92 @@
+<PrintLayout name="MyDisplayPDF" xmlns="https://www.salesforce.com/cgcloud/xsds"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Declarations>
+        <DataDeclaration name="currentDisplay" type="BoMyDisplay" />
+        <DataDeclaration name="loDisplays" type="LoMyDisplays" />
+    </Declarations>
+    <ReportLayout>
+        <!--
+           Current Display
+        -->
+        <h2 alignment="center">{{Labels::CurrentDisplayId; defaultLabel=Current Display}}</h2>
+        <table name="CurrentDisplayTable" dontBreakRows="false" tableLayout="noBorders">
+            <tbody>
+                <tr>
+                    <td alignment="right" width="100">{{Labels::NameId; defaultLabel=Name:}}</td>
+                    <td alignment="left" width="130">{{Declarations::currentDisplay.name}}</td>
+                    <td alignment="right" width="100">{{Labels::CustomerId; defaultLabel=Customer:}}</td>
+                    <td alignment="left" width="130">
+                        {{Declarations::currentDisplay.luCustomer.name}}</td>
+                </tr>
+                <tr>
+                    <td alignment="right">{{Labels::DescriptionId; defaultLabel=Descirption:}}</td>
+                    <td>{{Declarations::currentDisplay.description}}</td>
+                    <td alignment="right">{{Labels::TypeId; defaultLabel=Type:}}</td>
+                    <td>{{Declarations::currentDisplay.type; toggleId=DomDisplayType;
+                        toggleField=text}}</td>
+                </tr>
+                <tr>
+                    <td alignment="right">{{Labels::CompetitorId; defaultLabel=Competitor:}}</td>
+                    <td>{{Declarations::currentDisplay.competitorDisplay}}</td>
+                    <td />
+                    <td />
+                </tr>
+            </tbody>
+        </table>
+
+        <!--
+           Own Displays
+        -->
+        <h2 alignment="center">{{Labels::OwnDisplaysId; defaultLabel=Own Displays}}</h2>
+        <table tableLayout="headerLineOnly" name="OwnDisplayTable">
+            <thead>
+                <tr>
+                    <th width="150">{{Labels::OwnDisplayNameId; defaultLabel=Name}}</th>
+                    <th width="250">{{Labels::OwnDisplayDescriptionId; defaultLabel=Description}}</th>
+                    <th width="100">{{Labels::OwnDisplayCompetitorId; defaultLabel=Competitor
+                        Display}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <each name="itemsEach" value="{{Declarations::loDisplays}}">
+                    <filters>
+                        <filter fieldName="competitorDisplay" value="0" operator="EQ" />
+                    </filters>
+                    <tr>
+                        <td>{{.name}}</td>
+                        <td>{{.description}}</td>
+                        <td>{{.competitorDisplay}}</td>
+                    </tr>
+                </each>
+            </tbody>
+        </table>
+
+        <!--
+           Competitor Displays
+        -->
+        <h2 alignment="center">{{Labels::CompetitorDisplaysId; defaultLabel=Competitor Displays}}</h2>
+        <table tableLayout="headerLineOnly" name="OwnDisplayTable">
+            <thead>
+                <tr>
+                    <th width="150">{{Labels::CompetitorDisplayNameId; defaultLabel=Name}}</th>
+                    <th width="250">{{Labels::ComppetitorDisplayDescriptionId;
+                        defaultLabel=Description}}</th>
+                    <th width="100">{{Labels::ComppetitorDisplayCompetitorId;
+                        defaultLabel=Competitor Display}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <each name="itemsEach" value="{{Declarations::loDisplays}}">
+                    <filters>
+                        <filter fieldName="competitorDisplay" value="1" operator="EQ" />
+                    </filters>
+                    <tr>
+                        <td>{{.name}}</td>
+                        <td>{{.description}}</td>
+                        <td>{{.competitorDisplay}}</td>
+                    </tr>
+                </each>
+            </tbody>
+        </table>
+    </ReportLayout>
+</PrintLayout>

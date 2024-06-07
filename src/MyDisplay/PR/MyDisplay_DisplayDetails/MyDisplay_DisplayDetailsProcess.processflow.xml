@@ -44,6 +44,7 @@
             <Event name="addDisplay" action="LoadDisplayDetails.create"/>
             <Event name="CustomerLookup" action="OpenCustomerNameLookup" />
             <Event name="NavigateTo" action="NavigateTo" />
+            <Event name="printPDF" action="PrintPDF"/>
           </Events>
         </Action>
         <Action name="LoadDisplayDetails" actionType="MASTER_DETAIL_HANDLER">
@@ -92,6 +93,13 @@
             <!-- Call the NavigateTo Function if the button is pressed-->
             <Action name="NavigateTo" actionType="LOGIC" call="ProcessContext::CurrentDisplay.MyNavigateTo">
                 <TransitionTo action="ShowDisplayDetails" />
+            </Action>
+            <!-- PDF Print -->
+            <Action name="PrintPDF" actionType="PRINTV2" printId="MyDisplayPDF" locale="ApplicationContext::user.languageSpoken" showShareButton="true">
+              <Parameters>
+                <Input name="currentDisplay" value="ProcessContext::CurrentDisplay" />
+                <Input name="loDisplays" value="ProcessContext::DisplayList" />
+              </Parameters>
             </Action>
     </Actions>
     </Body>

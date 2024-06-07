@@ -83,6 +83,17 @@
                 </TabSelector>
             </Area>
         <Area areaName="detailArea" areaPattern="GroupedElementsArea">
+            <MenuItems>
+                <MenuItem directlyVisible="false" itemId="PrintPDF">
+                    <Bindings>
+                        <Resource target="Text" type="Label" id="PrintPDF" defaultLabel="Print PDF" />
+                        <Resource target="Icon" type="Image" id="ShowPrint_PB" />
+                    </Bindings>
+                    <Events>
+                        <ButtonPressedEvent event="printPDF" />
+                    </Events>
+                </MenuItem>
+            </MenuItems>
           <GroupElement name="Info">
             <Bindings>
               <Resource target="Title" type="Label" id="DisplayDetailInfoGroup" defaultLabel="Info" />
